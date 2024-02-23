@@ -82,7 +82,7 @@ export default function AppFunctional(props) {
     } else {
       setIndex(nextIndex);
       setSteps(steps + 1);
-      setMessage('');
+      setMessage(initialMessage);
     }
   }
 
@@ -107,7 +107,7 @@ export default function AppFunctional(props) {
       .post('http://localhost:9000/api/result', requestData)
       .then(response => {
         console.log(response.data);
-        setEmail('');
+        setEmail(initialEmail);
         setMessage(response.data.message);
       })
       .catch(error => {
