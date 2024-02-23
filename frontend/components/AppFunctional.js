@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-/* 
+
 // önerilen başlangıç stateleri
 const initialMessage = ''
 const initialEmail = ''
 const initialSteps = 0
 const initialIndex = 4 //  "B" nin bulunduğu indexi
-*/
+
 
 export default function AppFunctional(props) {
   // AŞAĞIDAKİ HELPERLAR SADECE ÖNERİDİR.
   // Bunları silip kendi mantığınızla sıfırdan geliştirebilirsiniz.
-  const [message, setMessage] = useState('');
-  const [email, setEmail] = useState('');
-  const [steps, setSteps] = useState(0);
-  const [index, setIndex] = useState(4);
+  const [message, setMessage] = useState(initialMessage);
+  const [email, setEmail] = useState(initialEmail);
+  const [steps, setSteps] = useState(initialSteps);
+  const [index, setIndex] = useState(initialIndex);
 
   function getXY(index) {
     // Koordinatları izlemek için bir state e sahip olmak gerekli değildir.
@@ -35,10 +35,10 @@ export default function AppFunctional(props) {
 
   function reset() {
     // Tüm stateleri başlangıç ​​değerlerine sıfırlamak için bu helperı kullanın.
-    setMessage('');
-    setEmail('');
-    setSteps(0);
-    setIndex(4);
+    setMessage(initialMessage);
+    setEmail(initialEmail);
+    setSteps(initialSteps);
+    setIndex(initialIndex);
   }
 
   function sonrakiIndex(yon) {
